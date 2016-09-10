@@ -7,6 +7,7 @@ public class PickController : MonoBehaviour
 {
     public System.Action<GameObject> CardPicked;
 
+    #region Serialize Fields 
     [SerializeField]
     private List<GameObject> MyCreatures;
     [SerializeField]
@@ -20,16 +21,23 @@ public class PickController : MonoBehaviour
 
     [SerializeField]
     private Texture2D ScopeTex;
+    #endregion
 
+    #region Private Fields
     private PickState CurrentPickState;
     private GameObject PickedCardHolder = null;
     private GameObject CreatureHolder = null;
+    #endregion
 
+    #region Const Fields
     private const int DELTA_TIME_AMOUNT = 50;
     private const float POSITION_CENTER_CREATURE_X = 0;
     private const float POSITION_CENTER_CREATURE_Y = -1.1f;
     private const float POSITION_CENTER_CREATURE_Z = -5;
     private const float POSITION_LEFT_STEP_CREATURE_X = 0.7f;
+    #endregion
+
+    private IInputCommands InputManager;
 
     enum PickState
     {
@@ -50,6 +58,10 @@ public class PickController : MonoBehaviour
         KilledCreaturesHolder.transform.parent = gameObject.transform;
         UsedCardsHolder = new GameObject("UsedCardsHolder");
         UsedCardsHolder.transform.parent = gameObject.transform;
+
+#if UNITY_STANDALONE_WIN
+        InputManager = new PCInputManager();
+#endif
 	}
 
 	void Update () 
@@ -135,7 +147,7 @@ public class PickController : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hitInfo))
         {
-            if (Input.GetMouseButtonDown(0))
+            if (InputManager.CursorPressedDown())
             {
                 if (hitInfo.transform.gameObject.tag == ConstTag.Card)
                 {
@@ -164,7 +176,7 @@ public class PickController : MonoBehaviour
 
         PickedCardHolder.transform.position = Vector3.Lerp(PickedCardHolder.transform.position, cardPos, Time.deltaTime * DELTA_TIME_AMOUNT);
 
-        if (Input.GetMouseButtonUp(0))
+        if (InputManager.CursorPressedUp())
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hitInfo))
