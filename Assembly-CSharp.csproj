@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\Cards\DeckController.cs" />
      <Compile Include="Assets\Scripts\Cards\PickController.cs" />
      <Compile Include="Assets\Scripts\Const\ConstTag.cs" />
+     <Compile Include="Assets\Scripts\Core\EventsManager.cs" />
      <Compile Include="Assets\Scripts\Core\MainController.cs" />
      <Compile Include="Assets\Scripts\Creatures\BaseCreature.cs" />
      <Compile Include="Assets\Scripts\Input\IInputCommands.cs" />

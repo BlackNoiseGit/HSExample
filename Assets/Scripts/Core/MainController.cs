@@ -5,18 +5,22 @@ using System.Collections;
 public class MainController : MonoBehaviour {
 
     public static MainController instance = null;
+    
     [HideInInspector]
     public DelayService DelayService { get { return _DelayService; } }
     [HideInInspector]
     public PickController PickController { get { return _PickController; } }
     [HideInInspector]
     public DeckController DeckController { get { return _DeckController; } }
+    [HideInInspector]
+    public EventsManager EventsManager { get { return _EventsManager; } }
+
 
     [SerializeField]
     private DeckController _DeckController;
     private DelayService _DelayService;
     private PickController _PickController;
-
+    private EventsManager _EventsManager;
 
     void Awake()
     {
@@ -34,5 +38,7 @@ public class MainController : MonoBehaviour {
         _PickController = GetComponent<PickController>();
         if (_PickController == null)
             _PickController = gameObject.AddComponent<PickController>();
+
+        _EventsManager = new EventsManager();
     }
 }

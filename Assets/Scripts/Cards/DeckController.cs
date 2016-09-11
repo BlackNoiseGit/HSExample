@@ -114,38 +114,6 @@ public class DeckController : MonoBehaviour
         }
     }
 
-    //private void CalculateNewPosInHand(ref Vector3 lastPos)
-    //{
-    //    if (MyHand.Count == 0)
-    //        lastPos = new Vector3(POSITION_CENTER_CARD_X, POSITION_CENTER_CARD_Y, POSITION_CENTER_CARD_Z);
-    //    else
-    //    {
-    //        List<Vector3> newHandPoitions = new List<Vector3>();
-    //        Vector3 leftBorder = MyHand[0].transform.position;
-
-    //        if(leftBorder.x - POSITION_LEFT_STEP_CARD_X > -HandBorderX)
-    //        {
-    //            for(int i = 0; i <= MyHand.Count - 1; i++)
-    //                newHandPoitions.Add(MyHand[i].transform.position - Vector3.right * POSITION_LEFT_STEP_CARD_X);
-
-    //            lastPos = newHandPoitions[newHandPoitions.Count - 1] + Vector3.right * POSITION_LEFT_STEP_CARD_X * 2;
-    //            newHandPoitions.Add(lastPos);
-    //            MoveCardToNewPosInHand(newHandPoitions);
-    //        }
-    //        else
-    //        {
-    //            newHandPoitions.Add(MyHand[0].transform.position);
-    //            float step = Mathf.Abs(MyHand[0].transform.position.x * 2 / MyHand.Count);
-    //            for (int i = 1; i <= MyHand.Count - 1; i++)
-    //                newHandPoitions.Add(MyHand[0].transform.position + Vector3.right * step * i);
-
-    //            lastPos = newHandPoitions[newHandPoitions.Count - 1] + Vector3.right * step;
-    //            newHandPoitions.Add(lastPos);
-    //            MoveCardToNewPosInHand(newHandPoitions);
-    //        }
-    //    }
-    //}
-
     private List<Vector3> RecalculatePosInHand(int cardsCount)
     {
         List<Vector3> newHandPositions = new List<Vector3>();

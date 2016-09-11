@@ -153,9 +153,6 @@ public class BaseCreature : MonoBehaviour
         StartHealth = health;
         CurrentAttack = attack;
         CurrentHealth = health;
-
-        AttackText.text = attack.ToString();
-        HealthPointsText.text = health.ToString();
         CreatureType = creatureType;
         HeroType = heroType;
         ParentCard = parentCard;
