@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\Core\EventsManager.cs" />
      <Compile Include="Assets\Scripts\Core\MainController.cs" />
      <Compile Include="Assets\Scripts\Creatures\BaseCreature.cs" />
+     <Compile Include="Assets\Scripts\Creatures\CreaturesLineMover.cs" />
      <Compile Include="Assets\Scripts\Input\IInputCommands.cs" />
      <Compile Include="Assets\Scripts\Input\PCInputManager.cs" />
      <Compile Include="Assets\Scripts\Services\DelayService.cs" />

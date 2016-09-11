@@ -41,6 +41,11 @@ public class EventsManager
         BattleEvents[batteEvent] += callback;
     }
 
+    public void UnSubscribe(BattleEvent batteEvent, Action callback)
+    {
+        BattleEvents[batteEvent] -= callback;
+    }
+
     public void RunEvent(BattleEvent bEvent)
     {
         Action battleEvent = BattleEvents[bEvent];
