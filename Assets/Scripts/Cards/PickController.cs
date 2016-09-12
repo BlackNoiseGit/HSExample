@@ -74,6 +74,11 @@ public class PickController : MonoBehaviour
 #endif
 	}
 
+    void OnDestroy()
+    {
+        LineMover.AnimationEnd -= CreateCreature;
+    }
+
 	void Update () 
     {
         switch(CurrentPickState)
@@ -98,6 +103,7 @@ public class PickController : MonoBehaviour
         MyCreatures.Add(creature);
         card.transform.parent = UsedCardsHolder.transform;
         card.SetActive(false);
+        MainController.instance.EventsManager.RunEvent(BattleEvent.CreatureOnDesk);
     }
 
     private void DefaultState()
