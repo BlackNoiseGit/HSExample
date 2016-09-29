@@ -10,7 +10,8 @@ public enum BattleEvent
     CreatureOnDesk,
     CreatureEndTurn,
     CratureReceivedDamage,
-    CreatureWasHealed
+    CreatureWasHealed,
+    CreatureKilled
 }
 
 public class EventsManager 
@@ -22,8 +23,7 @@ public class EventsManager
     private Action ECreatureEndTurn = null;
     private Action ECratureReceivedDamage = null;
     private Action ECreatureWasHealed = null;
-
-    private Action EndEvent = null;
+    private Action ECreatureKilled = null;
 
     public EventsManager()
     {
@@ -34,6 +34,7 @@ public class EventsManager
         BattleEvents.Add(BattleEvent.CreatureEndTurn, ECreatureEndTurn);
         BattleEvents.Add(BattleEvent.CratureReceivedDamage, ECratureReceivedDamage);
         BattleEvents.Add(BattleEvent.CreatureWasHealed, ECreatureWasHealed);
+        BattleEvents.Add(BattleEvent.CreatureKilled, ECreatureKilled);
     }
 
     public void Subscribe(BattleEvent batteEvent, Action callback)

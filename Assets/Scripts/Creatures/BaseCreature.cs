@@ -111,6 +111,7 @@ public class BaseCreature : MonoBehaviour
     // Use this for initialization
 	void Start () 
     {
+        //
 	
 	}
 	
@@ -160,6 +161,7 @@ public class BaseCreature : MonoBehaviour
 
     public void MakeDeath()
     {
+        MainController.instance.EventsManager.RunEvent(BattleEvent.CreatureKilled);
         print(" UNIT DEATH =(");
     }
 }

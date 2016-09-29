@@ -93,6 +93,9 @@
  <Reference Include="UnityEditor.TreeEditor">
  <HintPath>G:/Program Files (x86)/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
  </Reference>
+ <Reference Include="ICSharpCode.SharpZipLib">
+ <HintPath>G:/UnityPr/3D/HSExample/Assets/ICSharpCode.SharpZipLib.dll</HintPath>
+ </Reference>
  <Reference Include="DOTween">
  <HintPath>G:/UnityPr/3D/HSExample/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>

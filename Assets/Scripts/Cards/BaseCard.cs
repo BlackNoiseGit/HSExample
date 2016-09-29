@@ -25,6 +25,9 @@ public class BaseCard : MonoBehaviour
     private GameObject CreaturePrefab;
 
     [SerializeField]
+    private Image Portrait;
+
+    [SerializeField]
     private string CardName;
     
     [Header("Card UI properties")]
@@ -56,12 +59,18 @@ public class BaseCard : MonoBehaviour
 
 	void Start () 
     {
-       
-        ManaCostText.text = ManaCost.ToString();
-        AttackText.text = Attack.ToString();
-        HealthPointsText.text = HealthPoints.ToString();
-        CreatureTypeText.text = CreatureType.ToString();
+
 	}
+
+    public void InitCard(string manaCost, string attack, string healthPoints, CreatureType creatureType, Sprite portrait)
+    {
+        CreatureType = creatureType;
+        ManaCostText.text = manaCost;
+        AttackText.text = attack;
+        HealthPointsText.text = healthPoints;
+        CreatureTypeText.text = CreatureType.ToString();
+        Portrait.sprite = portrait;
+    }
 
     public GameObject CreateCreatureAndPlaceOnDesk(Vector3 pos)
     {

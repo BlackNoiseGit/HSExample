@@ -50,6 +50,9 @@ public class PickController : MonoBehaviour
 
 	void Start () 
     {
+        CCFabric.CreateCard("CarrionGrub", HeroType.Hunter);
+        CCFabric.CreateCard("Dog", HeroType.Hunter);
+
         CurrentPickState = PickState.Default;
 
         MyCreatures = new List<GameObject>();

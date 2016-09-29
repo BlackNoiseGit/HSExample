@@ -1,0 +1,20 @@
+{
+  "Hunter": [
+    {
+      "Name":"Dog",
+      "ManaCost":1,
+      "Attack":1,
+      "HealthPoints":1,
+      "CreatureType":"Beast",
+      "TexturePath":"Textures/Hunter/HunterDog"
+    },
+    {
+      "Name":"CarrionGrub",
+      "ManaCost":3,
+      "Attack":2,
+      "HealthPoints":5,
+      "CreatureType":"Beast",
+      "TexturePath":"Textures/Hunter/HunterCarrionGrub"
+    }
+  ]
+}

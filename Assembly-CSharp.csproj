@@ -51,14 +51,19 @@
      <Compile Include="Assets\Scripts\Cards\BaseCard.cs" />
      <Compile Include="Assets\Scripts\Cards\DeckController.cs" />
      <Compile Include="Assets\Scripts\Cards\PickController.cs" />
+     <Compile Include="Assets\Scripts\Const\ConstCCCfg.cs" />
      <Compile Include="Assets\Scripts\Const\ConstTag.cs" />
+     <Compile Include="Assets\Scripts\Core\CCFabric.cs" />
      <Compile Include="Assets\Scripts\Core\EventsManager.cs" />
      <Compile Include="Assets\Scripts\Core\MainController.cs" />
      <Compile Include="Assets\Scripts\Creatures\BaseCreature.cs" />
      <Compile Include="Assets\Scripts\Creatures\CreaturesLineMover.cs" />
      <Compile Include="Assets\Scripts\Input\IInputCommands.cs" />
      <Compile Include="Assets\Scripts\Input\PCInputManager.cs" />
+     <Compile Include="Assets\Scripts\Services\ConfigReader.cs" />
      <Compile Include="Assets\Scripts\Services\DelayService.cs" />
+     <Compile Include="Assets\Scripts\Services\ICCReader.cs" />
+     <Compile Include="Assets\Scripts\Services\SimpleJSON.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark02.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark03.cs" />
@@ -98,6 +103,9 @@
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>G:/Program Files (x86)/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="ICSharpCode.SharpZipLib">
+ <HintPath>G:/UnityPr/3D/HSExample/Assets/ICSharpCode.SharpZipLib.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
  <HintPath>G:/UnityPr/3D/HSExample/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
